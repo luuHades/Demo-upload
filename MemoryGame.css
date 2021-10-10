@@ -1,0 +1,74 @@
+html{
+    padding: 0%;
+    margin: 0%;
+}
+body{
+    font-family: cursive;
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: rgb(170, 169, 107);
+}
+.broad{
+    width: 30%;
+    height: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    margin:auto;
+    perspective: 1000px;
+
+}
+.memoryCard{
+    width: 15%;
+    height: 25%;
+    position:relative;
+    margin: 5%;
+    transform-style:preserve-3d ;
+    transition: 0.5s;
+}
+.memoryCard.flip{
+    transform: rotateY(180deg);
+}
+.frontface{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transform:rotateY(180deg);
+}
+.backface{
+    height: 100%;
+    width: 100%;
+    background:white;
+    position: absolute;
+    padding: 30% 15%;
+    border-radius: 20%;
+    backface-visibility: hidden;
+}
+img{
+    width: 10%;
+}
+a{
+    position: absolute;
+    top: 550px;
+    left: 10%;
+    padding: 32px;
+    background-color: lightcoral;
+    border-radius: 40px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px; 
+    cursor: pointer;
+    opacity: 0.7;
+    transition: 0.3;
+    box-shadow: 10px 10px black;
+}
+a:hover{
+    opacity: 1;
+}
+@media (max-width:600px) {
+    .broad{
+        width: 70%;
+    }
+    a{
+        top: 450px;
+    }
+}
